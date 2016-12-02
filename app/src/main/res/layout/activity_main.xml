@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.hp.todo.MainActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+    <include layout="@layout/content_main" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56sp"
+        android:background="@color/divider"
+        >
+
+        <TextView
+            android:id="@+id/task_title"
+            android:layout_width="230sp"
+            android:layout_height="140sp"
+            android:text="    A little progress each day adds to Big Results"
+            android:textColor="#7B1FA2"
+            android:textSize="32sp"
+            android:layout_marginTop="12sp"
+            android:layout_below="@+id/btn"
+            android:layout_alignLeft="@+id/custom_font"
+            android:layout_alignStart="@+id/custom_font" />
+
+
+        <Button
+            android:id="@+id/angry_btn"
+            android:text="My Bucket List"
+            android:textColor="#fff"
+            android:textSize="38sp"
+            android:layout_width="360dp"
+            android:layout_height="80dp"
+            android:background="@color/primary"
+            android:clickable="true"
+            android:onClick="Goals"
+            android:layout_below="@+id/task_title"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/btn"
+            android:text="My Daily Tasks"
+            android:textColor="#fff"
+            android:textSize="38sp"
+            android:layout_width="360dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/angry_btn"
+            android:layout_alignStart="@+id/angry_btn"
+            android:clickable="true"
+            android:background="@color/primary"
+            android:onClick="Daily_task" />
+        <TextView
+            android:id="@+id/custom_font"
+            android:layout_width="230sp"
+            android:layout_height="140sp"
+            android:text="  It's a dream until you write it down...Then it's a goal"
+            android:textColor="#7B1FA2"
+            android:textSize="32sp"
+            android:shadowDx="8"
+            android:shadowDy="8"
+            android:layout_below="@+id/angry_btn"
+            android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
